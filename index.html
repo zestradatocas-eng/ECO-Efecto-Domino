@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO: El efecto dominó</title>
+    <meta name="description" content="Explora cómo la desaparición de una especie puede cambiar un ecosistema marino.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="#" class="logo">ECO<span>.</span></a>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#simulador">Simulador</a>
+            <a href="#preguntas">Preguntas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada" id="inicio">
+            <p class="etiqueta">ECOLOGÍA INTERACTIVA</p>
+            <h1>Todo está conectado.<br><span>¿Y si una especie desaparece?</span></h1>
+            <p class="descripcion">
+                En la naturaleza, cada especie cumple una función.
+                Descubre cómo la desaparición de una puede provocar
+                un efecto dominó en todo el ecosistema.
+            </p>
+            <a href="#simulador" class="boton-principal">Explorar simulador ↗</a>
+            <p class="nota">Un ecosistema. Muchas conexiones. Un equilibrio.</p>
+        </section>
+
+        <section class="seccion" id="simulador">
+            <p class="etiqueta">01 / EXPERIMENTA</p>
+            <h2>Elige una especie</h2>
+            <p>¿Qué podría pasar si deja de formar parte del ecosistema?</p>
+
+            <div class="especies">
+                <button class="especie" data-especie="tiburones">🦈 Tiburones</button>
+                <button class="especie" data-especie="rayas">🐟 Rayas</button>
+                <button class="especie" data-especie="moluscos">🐚 Moluscos</button>
+                <button class="especie" data-especie="pastos">🌿 Pastos marinos</button>
+            </div>
+
+            <div class="panel-simulador">
+                <div>
+                    <span class="estado">SIMULACIÓN EDUCATIVA</span>
+                    <h3 id="titulo-resultado">El ecosistema te espera</h3>
+                    <p id="texto-resultado">
+                        Selecciona una especie para comenzar a explorar sus conexiones.
+                    </p>
+                </div>
+                <button id="simular" class="boton-principal">Simular desaparición ↗</button>
+            </div>
+
+            <div id="resultado" aria-live="polite"></div>
+        </section>
+
+        <section class="seccion preguntas" id="preguntas">
+            <p class="etiqueta">02 / INVESTIGA</p>
+            <h2>¿Tienes curiosidad?</h2>
+            <p>Escribe una pregunta sobre las redes alimentarias.</p>
+
+            <form id="form-pregunta">
+                <input
+                    type="text"
+                    id="pregunta"
+                    placeholder="Ej.: ¿Qué es una cadena alimentaria?"
+                    aria-label="Escribe tu pregunta"
+                    required
+                >
+                <button type="submit" class="boton-principal">Consultar ↗</button>
+            </form>
+
+            <div class="sugerencias">
+                <button class="pregunta-sugerida">¿Qué es una red alimentaria?</button>
+                <button class="pregunta-sugerida">¿Qué es una especie clave?</button>
+                <button class="pregunta-sugerida">¿Todos los depredadores son malos?</button>
+            </div>
+
+            <div id="respuesta" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#inicio" class="logo">ECO<span>.</span></a>
+        <p>Comprender la naturaleza es el primer paso para protegerla.</p>
+        <small>Proyecto educativo · ECO: El efecto dominó</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
